@@ -1,0 +1,12 @@
+{
+  "name": "collector",
+  "connector": "mongodb",
+  "url": "",
+  "host": "localhost",
+  "port": 27017,
+  "user": "",
+  "password": "",
+  "database": "collectordb",
+  "useNewUrlParser": true,
+  "useUnifiedTopology": true
+}
