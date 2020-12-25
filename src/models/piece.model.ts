@@ -21,6 +21,13 @@ export class Piece extends Entity {
   @property({
     type: 'string',
     required: true,
+    description: 'Share image file name',
+  })
+  fileName?: string;
+
+  @property({
+    type: 'string',
+    required: true,
     description: 'Share name',
   })
   name?: string;
@@ -33,57 +40,64 @@ export class Piece extends Entity {
 
   @property({
     type: 'string',
-    description: 'Rarity',
+    description: 'Share Rarity',
   })
   rarity?: string;
 
   @property({
     type: 'string',
-    description: 'The issuer',
+    description: 'Share issuer',
   })
   issuer?: string;
 
   @property({
     type: 'string',
-    description: 'Signatures',
+    description: 'Share signatures',
   })
   signatures?: string;
 
   @property({
     type: 'string',
-    description: 'Quality of engraving',
+    description: 'Share quality of engraving',
   })
   quality?: string;
 
   @property({
     type: 'string',
-    description: 'Overall appearance',
+    description: 'Share overall appearance',
   })
   appearance?: string;
 
   @property({
     type: 'string',
-    description: 'Condition',
+    description: 'Share condition',
   })
   condition?: string;
 
   @property({
     type: 'Date',
-    description: 'Date of issue',
+    description: 'Share date of issue',
   })
   issueDate?: Date;
 
   @property({
     type: 'number',
-    description: 'Price estimate',
+    description: 'Share price estimate',
   })
   price?: number;
 
   @property({
     type: 'string',
-    description: 'Share country iso code',
+    description: 'Share share country iso code',
   })
   country?: string;
+
+  @property({
+    type: 'Date',
+    required: true,
+    description: 'Share creation date',
+  })
+  creationDate?: Date;
 
   // Define entity relations
   @belongsTo(() => PieceFamily)
