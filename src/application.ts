@@ -7,9 +7,11 @@ import {
 import {RepositoryMixin} from '@loopback/repository';
 import {RestApplication} from '@loopback/rest';
 import {ServiceMixin} from '@loopback/service-proxy';
+
 import multer from 'multer';
 import path from 'path';
 import {FILE_UPLOAD_SERVICE, STORAGE_DIRECTORY} from './keys';
+
 import {MySequence} from './sequence';
 
 export {ApplicationConfig};
