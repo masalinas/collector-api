@@ -40,8 +40,7 @@ export class FileUploadController {
     },
   })
   async fileUpload(
-    @requestBody.file()
-    request: Request,
+    @requestBody.file() request: Request,
     @inject(RestBindings.Http.RESPONSE) response: Response,
   ): Promise<object> {
     return new Promise<object>((resolve, reject) => {

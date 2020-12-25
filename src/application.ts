@@ -56,6 +56,8 @@ export class CollectorApiApplication extends BootMixin(
     // Upload files to `dist/.sandbox` by default
     destination = destination ?? path.join(__dirname, '../.sandbox');
     this.bind(STORAGE_DIRECTORY).to(destination);
+
+    // Configure the file upload service with multer options
     const multerOptions: multer.Options = {
       storage: multer.diskStorage({
         destination,
@@ -65,7 +67,7 @@ export class CollectorApiApplication extends BootMixin(
         },
       }),
     };
-    // Configure the file upload service with multer options
+
     this.configure(FILE_UPLOAD_SERVICE).to(multerOptions);
   }
 }
