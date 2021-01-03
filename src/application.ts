@@ -61,8 +61,9 @@ export class CollectorApiApplication extends BootMixin(
     const multerOptions: multer.Options = {
       storage: multer.diskStorage({
         destination,
-        // Use the original file name as is
         filename: (req, file, cb) => {
+          // Use the original file name as is. Set unique filename
+          file.originalname = new Date().getTime() + '.jpg';
           cb(null, file.originalname);
         },
       }),

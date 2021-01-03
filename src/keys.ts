@@ -17,4 +17,6 @@ export const FILE_UPLOAD_SERVICE = BindingKey.create<FileUploadHandler>(
 /**
  * Binding key for the storage directory
  */
-export const STORAGE_DIRECTORY = BindingKey.create<string>('storage.directory');
+export const STORAGE_DIRECTORY = BindingKey.create<string>(
+  'storage.directory'
+);
