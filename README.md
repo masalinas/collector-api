@@ -15,3 +15,6 @@ openapi-generator generate -i swagger.json -g typescript-angular
   "connector": "mongodb",
   "url": "mongodb://<USER_NAME>:<PASSWORD>@127.0.0.1:27017/collectordb?authSource=admin&ssl=false"
 }
+
+# Default images sources
+By default the server create a folder  in .sandbox to save all files
